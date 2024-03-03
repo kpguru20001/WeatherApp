@@ -90,7 +90,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "weather_app.wsgi.application"
+WSGI_APPLICATION = "weather_app.wsgi.app"
 
 
 # Database
