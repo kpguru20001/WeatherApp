@@ -63,7 +63,7 @@ class WeatherView(APIView):
             return Response({'error': 'Both zip and country code are required'}, status=status.HTTP_400_BAD_REQUEST)
         geocode_url = (
             f"https://us1.locationiq.com/v1/search/postalcode?postalcode={zipcode}&country={country}&key=pk"
-            f".626debd3c9fccbf0da04f9ba9d97f303&format=json")
+            f".<key>&format=json")
         geo_data = None
         try:
             response = requests.get(geocode_url)
@@ -80,7 +80,7 @@ class WeatherView(APIView):
         weather_url = (
             f"https://api.openweathermap.org/data/3.0/onecall?"
             f"lat={latitude}&lon={longitude}&exclude=minutely,hourly&units=metric"
-            f"&appid=acfb83128e4580c29f2b85ebf01115b1")
+            f"&appid=<APP_ID>")
         weather_data = None
         try:
             response = requests.get(weather_url)
