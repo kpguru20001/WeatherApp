@@ -8,8 +8,6 @@ import {
   NDivider,
   NInput,
   NMessageProvider,
-  useMessage,
-  NButton,
   createDiscreteApi,
   type ConfigProviderProps
 } from 'naive-ui'
@@ -20,7 +18,7 @@ const configProviderPropsRef = computed<ConfigProviderProps>(() => ({
   theme: darkTheme
 }))
 
-const { message, notification, dialog, loadingBar, modal } = createDiscreteApi(
+const { message } = createDiscreteApi(
   ['message', 'dialog', 'notification', 'loadingBar', 'modal'],
   {
     configProviderProps: configProviderPropsRef
